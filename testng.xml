@@ -1,0 +1,8 @@
+<suite name="Default suite" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test" verbose="2">
+    <classes>
+      <class name="tests.LoginTest">
+     </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
