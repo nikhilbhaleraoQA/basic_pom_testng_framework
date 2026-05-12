@@ -23,12 +23,14 @@ public class BaseTest {
 			String browser = System.getProperty("browser");
 
 			if (browser.equalsIgnoreCase("chrome")) {
+				log.info("Set Up chrome browser...");
 				driver = new ChromeDriver();
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().window().maximize();
 				driver.get(URL);
 			}
 			if (browser.equalsIgnoreCase("firefox")) {
+				log.info("Set Up Firefox browser...");
 				driver = new FirefoxDriver();
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().window().maximize();
