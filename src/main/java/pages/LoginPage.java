@@ -14,7 +14,7 @@ public class LoginPage extends BaseTest {
 
 //	private By textBox_Login = By.name("username");
 //	private By textBox_Password = By.name("password");
-	private By btn_Login1 = By.xpath("//button[@type='submit']");
+//	private By btn_Login1 = By.xpath("//button[@type='submit']");
 	
 	
 	@FindBy(name = "username")
@@ -53,7 +53,7 @@ public class LoginPage extends BaseTest {
 	}
 
 	public void clickLoginButton() {
-		driver.findElement(btn_Login1).click();
+		btn_Login.click();
 		log.info("Login Button Clicked...");
 		
 //		btn_Login.click();
