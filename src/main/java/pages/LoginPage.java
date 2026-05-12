@@ -13,10 +13,10 @@ import base.BaseTest;
 public class LoginPage {
 	
 	protected static final Logger log = LogManager.getLogger(LoginPage.class);
-	private WebDriver driver;
+//	private WebDriver driver;
 	
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+//		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
