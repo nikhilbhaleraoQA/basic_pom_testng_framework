@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -31,7 +32,9 @@ public class BaseTest {
 			}
 			if (browser.equalsIgnoreCase("firefox")) {
 				log.info("Set Up Firefox browser...");
-				driver = new FirefoxDriver();
+				FirefoxOptions options = new FirefoxOptions();
+				options.addArguments("-headless");
+				driver = new FirefoxDriver(options);
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.manage().window().maximize();
 				driver.get(URL);
